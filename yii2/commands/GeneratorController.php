@@ -10,7 +10,6 @@ class GeneratorController extends Controller
     public function actionTask($scenarioFile)
     {
         $basePath = \Yii::$app->basePath;
-//        echo $basePath;
         $config = require_once $basePath .'/'.$scenarioFile;
         foreach ($config as $taskNumber => $item) {
             /** @var Generator $class */

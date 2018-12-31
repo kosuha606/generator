@@ -8,6 +8,11 @@ abstract class Generator
 {
     protected $basePath;
 
+    public function __construct()
+    {
+        $this->init();
+    }
+
     public function init()
     {
         $this->ensureBasePath();
@@ -33,11 +38,26 @@ abstract class Generator
                 $self->$key = $value;
             }
         }
+
         return $self->scenario();
     }
 
     public function createFile($fileName, $content)
     {
-        file_put_contents($this->basePath.$fileName, $content);
+        try {
+            file_put_contents($this->basePath.$fileName, $content);
+        } catch (\Exception $exception) {
+            echo $exception->getMessage();
+        }
+    }
+
+    public function createDirectory($path, $mode = 0777)
+    {
+        try {
+            mkdir($path, $mode, true);
+        } catch (\Exception $exception) {
+            echo $exception->getMessage();
+        }
+
     }
 }
