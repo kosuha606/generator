@@ -10,11 +10,7 @@ Installation
 
 For installation you can do like this in your composer.json:
 ```
-"scripts": {
-    "post-install-cmd": [
-      "git clone https://github.com/kosuhin/generator.git kosuhin/generator || cd kosuhin/generator & git pull"
-    ]
-}
+$ composer require kosuha606/generator
 ```
 
 Usage in Yii2
