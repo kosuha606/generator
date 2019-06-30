@@ -1,15 +1,28 @@
 <?php
 
-namespace kosuhin\generator\yii2\generators;
+namespace kosuha606\Generator\yii2\generators;
 
 use kosuhin\generator\Generator;
 
+/**
+ * Class Controller
+ * @package kosuha606\Generator\yii2\generators
+ */
 class Controller extends Generator
 {
+    /**
+     * @var
+     */
     public $name;
 
+    /**
+     * @var
+     */
     public $model;
 
+    /**
+     * @return string
+     */
     public function scenario()
     {
         return <<<TEXT

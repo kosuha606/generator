@@ -1,13 +1,23 @@
 <?php
 
-namespace kosuhin\generator\yii2\generators;
+namespace kosuha606\Generator\yii2\generators;
 
 use kosuhin\generator\Generator;
 
+/**
+ * Class CreateView
+ * @package kosuha606\Generator\yii2\generators
+ */
 class CreateView extends Generator
 {
+    /**
+     * @var array
+     */
     public $fields = [];
 
+    /**
+     * @return string
+     */
     public function scenario()
     {
         $fieldLabels = '';

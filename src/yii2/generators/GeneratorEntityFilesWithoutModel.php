@@ -1,15 +1,28 @@
 <?php
 
-namespace kosuhin\generator\yii2\generators;
+namespace kosuha606\Generator\yii2\generators;
 
 use kosuhin\generator\Generator;
 
+/**
+ * Class GeneratorEntityFilesWithoutModel
+ * @package kosuha606\Generator\yii2\generators
+ */
 class GeneratorEntityFilesWithoutModel extends Generator
 {
+    /**
+     * @var string
+     */
     public $base = '';
 
+    /**
+     * @var array
+     */
     public $fields = [];
 
+    /**
+     * @return string|void
+     */
     public function scenario()
     {
         $controllerTemplate = Controller::run([
@@ -26,7 +39,6 @@ class GeneratorEntityFilesWithoutModel extends Generator
             'fields' => $this->fields,
             'base' => $this->base,
         ]);
-
         $lowerBase = strtolower($this->base);
         $this->createFile('services/'.$this->base.'Service.php', $serviceTemplate);
         $this->createFile('controllers/'.$this->base.'Controller.php', $controllerTemplate);

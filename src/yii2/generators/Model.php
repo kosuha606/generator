@@ -1,17 +1,33 @@
 <?php
 
-namespace kosuhin\generator\yii2\generators;
+namespace kosuha606\Generator\yii2\generators;
 
 use kosuhin\generator\Generator;
 
+/**
+ * Class Model
+ * @package kosuha606\Generator\yii2\generators
+ */
 class Model extends Generator
 {
+    /**
+     * @var
+     */
     public $table;
 
+    /**
+     * @var
+     */
     public $name;
 
+    /**
+     * @var array
+     */
     public $fields = [];
 
+    /**
+     * @return string
+     */
     public function scenario()
     {
         $fieldsStr = '';

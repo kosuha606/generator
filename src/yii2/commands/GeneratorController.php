@@ -1,12 +1,19 @@
 <?php
 
-namespace kosuhin\generator\yii2\commands;
+namespace kosuha606\Generator\yii2\commands;
 
 use kosuhin\generator\Generator;
 use yii\console\Controller;
 
+/**
+ * Class GeneratorController
+ * @package kosuhin\generator\yii2\commands
+ */
 class GeneratorController extends Controller
 {
+    /**
+     * @param $scenarioFile
+     */
     public function actionTask($scenarioFile)
     {
         $basePath = \Yii::$app->basePath;
