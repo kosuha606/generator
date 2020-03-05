@@ -16,8 +16,8 @@ $ composer require kosuha606/generator
 Usage in Yii2
 ---
 
-For Yii2 you can use GeneratorController - it is the command
-what can to input get scenarios of .php files like so:
+For Yii2 you may use GeneratorController - it is the command
+what can get scenarios of .php files like so:
 ```
 <?php
 
