@@ -8,7 +8,7 @@ generator classes what you may create.
 Installation
 ---
 
-For installation you can do like this in your composer.json:
+For installation you may do like this in your composer.json:
 ```
 $ composer require kosuha606/generator
 ```
